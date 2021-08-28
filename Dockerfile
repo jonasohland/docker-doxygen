@@ -5,5 +5,6 @@ LABEL MAINTAINER Jonas Ohland <jonas.ohland@gmail.com> \
 
 RUN apk --update add doxygen graphviz ttf-freefont && \
     rm -rf /var/cache/apk/*
-    
-CMD ["doxygen", "-v"]
+
+ENTRYPOINT [ "doxygen" ]
+CMD [ "-v" ]
